@@ -1,0 +1,1462 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Documenti del 15 Maggio 2026 · Classi Quinte — IIS Gregorio Mendel</title>
+<meta name="description" content="Documenti del Consiglio di Classe (art. 17, D.lgs. 62/2017) — Classi quinte IIS Gregorio Mendel, Villa Cortese (MI). Per commissari esterni e presidenti di commissione. Esame di Stato 2025/2026.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+<style>
+/* ══════════════════════════════════════════
+   CSS VARIABLES
+══════════════════════════════════════════ */
+:root {
+  --g-darkest:  #0d3b10;
+  --g-dark:     #1b5e20;
+  --g-primary:  #2e7d32;
+  --g-med:      #388e3c;
+  --g-light:    #4caf50;
+  --g-pale:     #e8f5e9;
+  --g-border:   #c8e6c9;
+  --g-mid:      #81c784;
+  --gold:       #e8a000;
+  --gold-light: #ffd54f;
+  --white:      #ffffff;
+  --off-white:  #f5f8f5;
+  --text:       #1a1a1a;
+  --text-mid:   #4a4a4a;
+  --text-light: #7a7a7a;
+  --teal:       #00897b;
+  --indigo:     #3949ab;
+  --radius:     0.875rem;
+  --shadow-sm:  0 2px 8px rgba(27,94,32,0.08);
+  --shadow:     0 6px 24px rgba(27,94,32,0.12);
+  --shadow-lg:  0 16px 48px rgba(27,94,32,0.20);
+}
+
+/* ══════════════════════════════════════════
+   RESET & BASE
+══════════════════════════════════════════ */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  background: var(--off-white);
+  color: var(--text);
+  line-height: 1.65;
+  overflow-x: hidden;
+}
+a { color: inherit; }
+button { border: none; background: none; cursor: pointer; font-family: inherit; }
+
+/* ══════════════════════════════════════════
+   SCROLL PROGRESS BAR
+══════════════════════════════════════════ */
+#progress-bar {
+  position: fixed;
+  top: 0; left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--g-light), var(--gold));
+  z-index: 9999;
+  transition: width 0.1s linear;
+}
+
+/* ══════════════════════════════════════════
+   TOP BAR
+══════════════════════════════════════════ */
+.topbar {
+  background: var(--g-darkest);
+  color: rgba(255,255,255,0.7);
+  font-size: 0.76rem;
+  padding: 0.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  letter-spacing: 0.02em;
+  position: relative;
+  z-index: 100;
+}
+.topbar a {
+  color: var(--g-mid);
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: color 0.15s;
+}
+.topbar a:hover { color: var(--white); }
+
+/* ══════════════════════════════════════════
+   HERO
+══════════════════════════════════════════ */
+.hero {
+  background: linear-gradient(150deg, var(--g-darkest) 0%, var(--g-dark) 45%, var(--g-primary) 100%);
+  color: var(--white);
+  padding: 7rem 2rem 6rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 50% at 50% 60%, rgba(76,175,80,0.15) 0%, transparent 70%),
+    radial-gradient(ellipse 30% 20% at 20% 80%, rgba(232,160,0,0.08) 0%, transparent 60%);
+  pointer-events: none;
+}
+.leaf {
+  position: absolute;
+  opacity: 0;
+  animation: floatLeaf linear infinite;
+  pointer-events: none;
+}
+@keyframes floatLeaf {
+  0%   { transform: translateY(100vh) rotate(0deg) scale(0.6); opacity: 0; }
+  5%   { opacity: 0.4; }
+  90%  { opacity: 0.15; }
+  100% { transform: translateY(-120px) rotate(360deg) scale(1); opacity: 0; }
+}
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  width: 100%;
+  animation: heroFadeIn 0.9s ease both;
+}
+@keyframes heroFadeIn {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--g-mid);
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(129,199,132,0.35);
+  padding: 0.4rem 1.2rem;
+  border-radius: 2rem;
+  margin-bottom: 2rem;
+  backdrop-filter: blur(8px);
+}
+.hero-eyebrow span { color: var(--gold-light); }
+.hero h1 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(2.6rem, 6.5vw, 4.2rem);
+  font-weight: 700;
+  line-height: 1.08;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.015em;
+}
+.hero h1 em { font-style: italic; color: var(--g-mid); }
+.hero-subtitle {
+  font-size: 1rem;
+  font-weight: 300;
+  color: rgba(255,255,255,0.78);
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.hero-pills {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+.hero-pill {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.22);
+  color: rgba(255,255,255,0.88);
+  padding: 0.45rem 1.1rem;
+  border-radius: 2rem;
+  font-size: 0.82rem;
+  font-weight: 400;
+  backdrop-filter: blur(6px);
+}
+.hero-pill strong { color: var(--white); font-weight: 600; }
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--g-light);
+  color: var(--g-darkest);
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 0.85rem 2rem;
+  border-radius: 2rem;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  box-shadow: 0 4px 20px rgba(76,175,80,0.4);
+}
+.hero-cta:hover {
+  background: var(--gold-light);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(232,160,0,0.35);
+}
+
+/* ══════════════════════════════════════════
+   CONTAINER
+══════════════════════════════════════════ */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.75rem;
+}
+
+/* ══════════════════════════════════════════
+   INFO BANNER
+══════════════════════════════════════════ */
+.info-banner {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  background: var(--white);
+  border-left: 5px solid var(--g-light);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 1.5rem 2rem;
+  margin: 2.75rem 0 3.5rem;
+  box-shadow: var(--shadow-sm);
+}
+.info-banner-icon {
+  flex-shrink: 0;
+  width: 2.25rem;
+  height: 2.25rem;
+  background: var(--g-pale);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--g-primary);
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-top: 0.1rem;
+}
+.info-banner-text strong {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--g-dark);
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+.info-banner-text p {
+  font-size: 0.87rem;
+  color: var(--text-mid);
+  line-height: 1.6;
+}
+
+/* ══════════════════════════════════════════
+   SECTION HEADING
+══════════════════════════════════════════ */
+.section-head { margin-bottom: 2rem; }
+.section-head h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: var(--g-dark);
+  line-height: 1.2;
+  margin-bottom: 0.4rem;
+}
+.section-head p { font-size: 0.9rem; color: var(--text-light); }
+
+/* ══════════════════════════════════════════
+   FILTER BAR
+══════════════════════════════════════════ */
+.filter-bar {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  align-items: center;
+}
+.filter-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin-right: 0.25rem;
+}
+.filter-btn {
+  padding: 0.45rem 1.1rem;
+  border-radius: 2rem;
+  border: 1.5px solid var(--g-border);
+  background: var(--white);
+  color: var(--text-mid);
+  font-size: 0.82rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.filter-btn:hover { border-color: var(--g-primary); color: var(--g-primary); }
+.filter-btn.active {
+  background: var(--g-primary);
+  border-color: var(--g-primary);
+  color: var(--white);
+  box-shadow: 0 3px 12px rgba(46,125,50,0.3);
+}
+.dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+  flex-shrink: 0;
+  display: inline-block;
+}
+.f-it    .dot { background: var(--g-light); }
+.f-ip    .dot { background: var(--teal); }
+.f-serale .dot { background: var(--indigo); }
+.filter-btn.active .dot { background: rgba(255,255,255,0.7); }
+.filter-count {
+  background: rgba(0,0,0,0.08);
+  color: inherit;
+  border-radius: 1rem;
+  padding: 0 0.45rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+.filter-btn.active .filter-count { background: rgba(255,255,255,0.25); }
+
+/* ══════════════════════════════════════════
+   DOCS GRID
+══════════════════════════════════════════ */
+.docs-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.4rem;
+  margin-bottom: 1rem;
+}
+.docs-grid.filtered-view .doc-card { display: none; }
+.docs-grid.filtered-view .doc-card.visible { display: flex; }
+
+/* ══════════════════════════════════════════
+   CARD
+══════════════════════════════════════════ */
+.doc-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  border: 1px solid var(--g-border);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.2s;
+  box-shadow: var(--shadow-sm);
+  opacity: 0;
+  transform: translateY(20px);
+}
+.doc-card.revealed {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.25s ease, border-color 0.2s;
+}
+.doc-card:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: var(--shadow-lg);
+  z-index: 2;
+}
+.doc-card.it:hover    { border-color: var(--g-light); }
+.doc-card.ip:hover    { border-color: var(--teal); }
+.doc-card.serale:hover { border-color: var(--indigo); }
+
+.card-band { height: 5px; flex-shrink: 0; }
+.card-band.it     { background: linear-gradient(90deg, var(--g-light), var(--g-med)); }
+.card-band.ip     { background: linear-gradient(90deg, #4db6ac, var(--teal)); }
+.card-band.serale { background: linear-gradient(90deg, #7986cb, var(--indigo)); }
+
+.card-header {
+  padding: 1.4rem 1.4rem 0.9rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+}
+.class-badge {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.1rem;
+  font-weight: 700;
+  line-height: 1;
+  flex-shrink: 0;
+  padding-top: 0.1rem;
+  letter-spacing: -0.02em;
+}
+.it     .class-badge { color: var(--g-primary); }
+.ip     .class-badge { color: var(--teal); }
+.serale .class-badge { color: var(--indigo); }
+
+.card-tipo {
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 0.18rem 0.55rem;
+  border-radius: 0.25rem;
+  margin-bottom: 0.3rem;
+}
+.it     .card-tipo { background: var(--g-pale);  color: var(--g-primary); }
+.ip     .card-tipo { background: #e0f2f1;          color: var(--teal); }
+.serale .card-tipo { background: #e8eaf6;          color: var(--indigo); }
+
+.card-indirizzo { font-size: 0.78rem; color: var(--text-mid); line-height: 1.4; }
+.card-articolazione { font-size: 0.72rem; color: var(--text-light); font-style: italic; margin-top: 0.15rem; }
+
+.card-divider { height: 1px; background: var(--g-border); margin: 0 1.4rem; }
+
+.card-profilo { padding: 0.9rem 1.4rem 0.6rem; flex: 1; }
+.profilo-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--g-primary);
+  margin-bottom: 0.45rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.profilo-label::after { content: ''; flex: 1; height: 1px; background: var(--g-border); }
+.profilo-snippet {
+  font-size: 0.81rem;
+  color: var(--text-mid);
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.profilo-snippet.placeholder { color: var(--text-light); font-style: italic; }
+
+.card-readmore {
+  padding: 0.5rem 1.4rem 0;
+  font-size: 0.75rem;
+  color: var(--g-primary);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.2s, transform 0.2s;
+}
+.doc-card.ip .card-readmore     { color: var(--teal); }
+.doc-card.serale .card-readmore { color: var(--indigo); }
+.doc-card:hover .card-readmore  { opacity: 1; transform: translateY(0); }
+
+.card-footer {
+  padding: 0.9rem 1.4rem;
+  border-top: 1px solid var(--g-border);
+  margin-top: auto;
+}
+.btn-pdf {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: filter 0.15s, transform 0.1s;
+  color: var(--white);
+  position: relative;
+  z-index: 2;
+}
+.it     .btn-pdf { background: var(--g-primary); }
+.ip     .btn-pdf { background: var(--teal); }
+.serale .btn-pdf { background: var(--indigo); }
+.btn-pdf:hover { filter: brightness(1.12); transform: scale(1.02); }
+
+/* ══════════════════════════════════════════
+   MODAL
+══════════════════════════════════════════ */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10,30,12,0.65);
+  backdrop-filter: blur(6px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.modal-overlay.open { opacity: 1; pointer-events: all; }
+
+.modal-panel {
+  background: var(--white);
+  width: min(560px, 95vw);
+  height: 100vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: transform 0.35s cubic-bezier(0.32, 0, 0.15, 1);
+  box-shadow: -20px 0 60px rgba(0,0,0,0.25);
+}
+.modal-overlay.open .modal-panel { transform: translateX(0); }
+
+.modal-band { height: 6px; flex-shrink: 0; }
+.modal-band.it     { background: linear-gradient(90deg, var(--g-light), var(--g-med)); }
+.modal-band.ip     { background: linear-gradient(90deg, #4db6ac, var(--teal)); }
+.modal-band.serale { background: linear-gradient(90deg, #7986cb, var(--indigo)); }
+
+.modal-top {
+  padding: 1.75rem 2rem 1.25rem;
+  border-bottom: 1px solid var(--g-border);
+  position: sticky;
+  top: 0;
+  background: var(--white);
+  z-index: 2;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.modal-class-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.6rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+.modal-class-name.it     { color: var(--g-primary); }
+.modal-class-name.ip     { color: var(--teal); }
+.modal-class-name.serale { color: var(--indigo); }
+
+.modal-tipo {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.65rem;
+  border-radius: 0.25rem;
+  display: inline-block;
+  margin-bottom: 0.35rem;
+}
+.modal-tipo.it     { background: var(--g-pale);  color: var(--g-primary); }
+.modal-tipo.ip     { background: #e0f2f1;          color: var(--teal); }
+.modal-tipo.serale { background: #e8eaf6;          color: var(--indigo); }
+
+.modal-close {
+  width: 2.25rem; height: 2.25rem;
+  border-radius: 50%;
+  background: var(--g-pale);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--g-dark);
+  flex-shrink: 0;
+  transition: background 0.15s;
+  cursor: pointer;
+  border: none;
+}
+.modal-close:hover { background: var(--g-border); }
+
+.modal-body { padding: 1.75rem 2rem; flex: 1; }
+
+.modal-meta {
+  background: var(--off-white);
+  border-radius: 0.5rem;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.75rem;
+}
+.modal-meta-row {
+  display: flex;
+  gap: 0.6rem;
+  font-size: 0.84rem;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid var(--g-border);
+  align-items: baseline;
+}
+.modal-meta-row:last-child { border-bottom: none; }
+.modal-meta-row dt {
+  font-weight: 600;
+  color: var(--text-light);
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  flex-shrink: 0;
+  width: 100px;
+}
+.modal-meta-row dd { color: var(--text-mid); }
+
+.modal-section-title {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--g-primary);
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.modal-section-title::after { content: ''; flex: 1; height: 1px; background: var(--g-border); }
+
+.modal-2prova {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--g-pale);
+  border: 1px solid var(--g-border);
+  border-radius: 0.5rem;
+  padding: 0.85rem 1.1rem;
+  margin: 1.5rem 0;
+}
+.modal-2prova-icon {
+  width: 2.5rem; height: 2.5rem;
+  background: var(--g-primary);
+  border-radius: 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-weight: 700;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+  font-family: 'Cormorant Garamond', serif;
+  letter-spacing: -0.02em;
+}
+.modal-2prova-text strong { display: block; font-size: 0.82rem; color: var(--g-dark); font-weight: 600; margin-bottom: 0.15rem; }
+.modal-2prova-text span   { font-size: 0.77rem; color: var(--text-light); }
+
+.modal-profilo-text {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1rem;
+  color: var(--text-mid);
+  line-height: 1.8;
+  white-space: pre-wrap;
+}
+.modal-profilo-text.placeholder {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.88rem;
+  color: var(--text-light);
+  font-style: italic;
+  background: var(--g-pale);
+  border-radius: 0.5rem;
+  padding: 1rem 1.25rem;
+  border: 1px dashed var(--g-border);
+}
+
+.modal-footer {
+  padding: 1.5rem 2rem;
+  border-top: 1px solid var(--g-border);
+  background: var(--off-white);
+  position: sticky;
+  bottom: 0;
+}
+.modal-btn-pdf {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  width: 100%;
+  padding: 0.95rem;
+  border-radius: 0.6rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--white);
+  transition: filter 0.15s, transform 0.15s;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+.modal-btn-pdf:hover { filter: brightness(1.1); transform: scale(1.01); }
+.modal-btn-pdf.it     { background: var(--g-primary); }
+.modal-btn-pdf.ip     { background: var(--teal); }
+.modal-btn-pdf.serale { background: var(--indigo); }
+
+/* ══════════════════════════════════════════
+   COMMISSIONE BOX
+══════════════════════════════════════════ */
+.comm-box {
+  background: var(--white);
+  border: 1px solid var(--g-border);
+  border-radius: var(--radius);
+  padding: 1.75rem 2rem;
+  margin: 2rem 0 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  box-shadow: var(--shadow-sm);
+}
+.comm-item h4 {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--g-dark);
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.comm-item p { font-size: 0.83rem; color: var(--text-mid); line-height: 1.6; }
+
+/* ══════════════════════════════════════════
+   ACCORDION
+══════════════════════════════════════════ */
+.legal-wrap {
+  background: var(--white);
+  border-radius: var(--radius);
+  border: 1px solid var(--g-border);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+.accordion-item { border-bottom: 1px solid var(--g-border); }
+.accordion-item:last-child { border-bottom: none; }
+
+.accordion-trigger {
+  width: 100%;
+  padding: 1.1rem 1.75rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  background: var(--white);
+  text-align: left;
+  transition: background 0.15s;
+}
+.accordion-trigger:hover          { background: var(--off-white); }
+.accordion-trigger[aria-expanded="true"] { background: var(--g-pale); }
+
+.acc-tag {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.25rem;
+  flex-shrink: 0;
+  width: 54px;
+  text-align: center;
+}
+.acc-tag.om   { background: #f3e5f5; color: #6a1b9a; }
+.acc-tag.dm   { background: #e1f5fe; color: #0277bd; }
+.acc-tag.dlgs { background: var(--g-pale); color: var(--g-primary); }
+.acc-tag.l    { background: #ffebee; color: #c62828; }
+.acc-tag.dpr  { background: #efebe9; color: #4e342e; }
+
+.acc-title { font-size: 0.88rem; font-weight: 600; color: var(--text); flex: 1; }
+.acc-chevron {
+  color: var(--text-light);
+  transition: transform 0.25s ease;
+  flex-shrink: 0;
+}
+.accordion-trigger[aria-expanded="true"] .acc-chevron { transform: rotate(180deg); }
+
+.accordion-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease;
+}
+.accordion-content.open { grid-template-rows: 1fr; }
+.accordion-inner {
+  overflow: hidden;
+  font-size: 0.84rem;
+  color: var(--text-mid);
+  line-height: 1.65;
+  padding: 0 1.75rem 0 calc(1.75rem + 54px + 1rem);
+}
+.accordion-content.open .accordion-inner { padding-bottom: 1.25rem; padding-top: 0.25rem; }
+.acc-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.8rem;
+  color: var(--g-primary);
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 0.6rem;
+}
+.acc-link:hover { text-decoration: underline; }
+
+/* ══════════════════════════════════════════
+   PORTAL LINK
+══════════════════════════════════════════ */
+.portal-link {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  background: var(--g-dark);
+  color: var(--white);
+  border-radius: var(--radius);
+  padding: 1.5rem 2rem;
+  text-decoration: none;
+  margin-bottom: 4rem;
+  transition: background 0.18s, transform 0.18s;
+  box-shadow: var(--shadow);
+}
+.portal-link:hover { background: var(--g-primary); transform: translateY(-2px); }
+.portal-icon {
+  width: 3rem; height: 3rem;
+  background: rgba(255,255,255,0.15);
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.portal-text strong { display: block; font-size: 0.95rem; font-weight: 600; }
+.portal-text span   { font-size: 0.8rem; color: rgba(255,255,255,0.68); }
+.portal-arrow { margin-left: auto; font-size: 1.5rem; color: var(--g-mid); }
+
+/* ══════════════════════════════════════════
+   FOOTER
+══════════════════════════════════════════ */
+footer {
+  background: var(--g-darkest);
+  color: rgba(255,255,255,0.6);
+  padding: 3rem 2rem 2.5rem;
+  text-align: center;
+}
+.footer-inner { max-width: 640px; margin: 0 auto; }
+.footer-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 0.6rem;
+  letter-spacing: -0.01em;
+}
+footer p { font-size: 0.84rem; line-height: 1.7; }
+footer strong { color: var(--white); }
+footer a { color: var(--g-mid); text-decoration: none; }
+footer a:hover { text-decoration: underline; }
+.footer-divider { border: none; border-top: 1px solid rgba(255,255,255,0.12); margin: 1.5rem auto; max-width: 280px; }
+.footer-copy { font-size: 0.75rem; color: rgba(255,255,255,0.38); margin-top: 1rem; }
+
+/* ══════════════════════════════════════════
+   REVEAL UTILITY
+══════════════════════════════════════════ */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ══════════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════════ */
+@media (max-width: 1100px) { .docs-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 800px) {
+  .docs-grid { grid-template-columns: repeat(2, 1fr); }
+  .comm-box  { grid-template-columns: 1fr; gap: 1.25rem; }
+}
+@media (max-width: 560px) {
+  .docs-grid { grid-template-columns: 1fr; }
+  .topbar { flex-direction: column; align-items: flex-start; gap: 0.3rem; }
+  .hero { padding: 5rem 1.25rem 4rem; min-height: auto; }
+  .modal-panel { width: 100vw; }
+  .modal-top { padding: 1.25rem; }
+  .modal-body { padding: 1.25rem; }
+  .modal-footer { padding: 1rem 1.25rem; }
+  .accordion-inner { padding-left: 1.75rem; }
+}
+</style>
+</head>
+<body>
+
+<div id="progress-bar"></div>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <span>IIS Gregorio Mendel &nbsp;&middot;&nbsp; Villa Cortese (MI) &nbsp;&middot;&nbsp; Esame di Stato a.s. 2025/2026</span>
+  <a href="https://iismendel.github.io/Esame-Maturit-_25_26_IIS-MENDEL/" target="_blank" rel="noopener">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+      <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/>
+      <polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
+    </svg>
+    Pagina esame di Maturità (studenti)
+  </a>
+</div>
+
+<!-- HERO -->
+<header class="hero" id="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">
+      Esame di Stato &nbsp;&middot;&nbsp; A.S. 2025/2026 &nbsp;&middot;&nbsp; <span>IIS Gregorio Mendel</span>
+    </div>
+    <h1>Documenti del <em>15 Maggio</em><br>Classi Quinte</h1>
+    <p class="hero-subtitle">
+      Documentazione dei Consigli di Classe ai sensi dell'art. 17, co. 1, D.lgs. 62/2017.<br>
+      Riservata ai presidenti e ai commissari esterni delle commissioni d'esame.
+    </p>
+    <div class="hero-pills">
+      <span class="hero-pill">8 classi quinte</span>
+      <span class="hero-pill">Depositati entro il <strong>15 maggio 2026</strong></span>
+      <span class="hero-pill">Via Ferrazzi 15 &nbsp;&middot;&nbsp; Villa Cortese (MI)</span>
+    </div>
+    <a class="hero-cta" href="#documenti">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <polyline points="6 9 12 15 18 9"/>
+      </svg>
+      Consulta i documenti
+    </a>
+  </div>
+</header>
+
+<!-- MAIN -->
+<main>
+<div class="container">
+
+  <div class="info-banner reveal">
+    <div class="info-banner-icon">i</div>
+    <div class="info-banner-text">
+      <strong>Documento del Consiglio di Classe — art. 17, co. 1, D.lgs. 62/2017</strong>
+      <p>Il Documento del 15 maggio è elaborato dal Consiglio di Classe entro tale data e contiene: il profilo della classe, il percorso didattico, le attività di Formazione scuola-lavoro (FSL/PCTO), gli strumenti e i criteri di valutazione adottati, eventuali percorsi personalizzati e ogni altra informazione utile per le commissioni. Il documento è pubblico ed è affisso all'albo dell'istituto.</p>
+    </div>
+  </div>
+
+  <section id="documenti">
+    <div class="section-head reveal">
+      <h2>Le otto classi quinte</h2>
+      <p>Seleziona una classe per leggere il profilo completo e scaricare il documento PDF.</p>
+    </div>
+
+    <div class="filter-bar reveal">
+      <span class="filter-label">Filtra:</span>
+      <button class="filter-btn active" data-filter="all">
+        Tutte le classi <span class="filter-count" id="count-all">8</span>
+      </button>
+      <button class="filter-btn f-it" data-filter="it">
+        <span class="dot"></span> Istituto Tecnico <span class="filter-count" id="count-it">0</span>
+      </button>
+      <button class="filter-btn f-ip" data-filter="ip">
+        <span class="dot"></span> Istituto Professionale <span class="filter-count" id="count-ip">0</span>
+      </button>
+      <button class="filter-btn f-serale" data-filter="serale">
+        <span class="dot"></span> Corso Serale IDA <span class="filter-count" id="count-serale">0</span>
+      </button>
+    </div>
+
+    <div class="docs-grid" id="docs-grid"></div>
+
+    <div class="comm-box reveal">
+      <div class="comm-item">
+        <h4>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+          Calendario colloqui
+        </h4>
+        <p>Il calendario dei colloqui è deliberato da ciascuna sottocommissione. I punteggi delle prove scritte vengono pubblicati almeno <strong>due giorni prima</strong> dell'inizio dei colloqui, domeniche e festivi esclusi (art. 20, co. 4, O.M. 54/2026).</p>
+      </div>
+      <div class="comm-item">
+        <h4>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+            <path d="M16 3.13a4 4 0 010 7.75"/>
+          </svg>
+          Composizione commissione
+        </h4>
+        <p>Ogni commissione: <strong>un presidente esterno</strong> (unico per due sottocommissioni) + 2 commissari esterni + 2 commissari interni per sottocommissione. I commissari interni sono nominati con riferimento alle discipline del <strong>D.M. n. 13/2026</strong>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEGAL -->
+  <section id="normativa">
+    <div class="section-head reveal">
+      <h2>Riferimenti normativi</h2>
+      <p>Principali fonti legislative per presidenti e commissari — link diretto ai testi ufficiali.</p>
+    </div>
+
+    <div class="legal-wrap reveal">
+
+      <div class="accordion-item">
+        <button class="accordion-trigger" aria-expanded="false">
+          <span class="acc-tag l">Legge</span>
+          <span class="acc-title">L. 30 ottobre 2025, n. 164 — Riforma dell'Esame di Maturità</span>
+          <svg class="acc-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="accordion-content"><div class="accordion-inner">
+          Conversione in legge del D.L. 127/2025. È la norma portante dell'esame 2025/2026: reintroduce la denominazione <strong>«esame di maturità»</strong>; riduce la commissione da 7 a <strong>5 membri</strong> (presidente esterno + 2 esterni + 2 interni per classe); porta il <strong>bonus a 90 punti</strong> complessivi (non più 97); inserisce la relazione FSL nel colloquio orale; introduce la formazione obbligatoria per i commissari.
+          <br><a class="acc-link" href="https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2025-10-30;164" target="_blank" rel="noopener">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            Testo integrale su normattiva.it
+          </a>
+        </div></div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-trigger" aria-expanded="false">
+          <span class="acc-tag dlgs">D.lgs.</span>
+          <span class="acc-title">D.lgs. 13 aprile 2017, n. 62 — Riferimento generale</span>
+          <svg class="acc-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="accordion-content"><div class="accordion-inner">
+          Decreto legislativo di riferimento generale: requisiti di ammissione, struttura dell'esame, credito scolastico, criteri di valutazione. Allegato A: tabella crediti scolastici. Più volte novellato, da ultimo dalla L. 164/2025 e dalla L. 150/2024.
+          <br><a class="acc-link" href="https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2017-04-13;62" target="_blank" rel="noopener">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            Testo integrale su normattiva.it
+          </a>
+        </div></div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-trigger" aria-expanded="false">
+          <span class="acc-tag om">O.M.</span>
+          <span class="acc-title">O.M. 54 del 26 marzo 2026 — Organizzazione e modalità d'esame</span>
+          <svg class="acc-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="accordion-content"><div class="accordion-inner">
+          Disciplina organizzazione e modalità di svolgimento dell'Esame di Stato 2025/2026: commissioni, prove, colloquio, sessioni suppletiva e straordinaria. <strong>Allegato A</strong>: griglia di valutazione del colloquio orale (20 punti).
+          <br><a class="acc-link" href="https://www.mim.gov.it/-/ordinanza-ministeriale-n-54-del-26-marzo-2026" target="_blank" rel="noopener">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            Testo integrale su mim.gov.it
+          </a>
+        </div></div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-trigger" aria-expanded="false">
+          <span class="acc-tag dm">D.M.</span>
+          <span class="acc-title">D.M. n. 13 del 29 gennaio 2026 — Discipline per indirizzo</span>
+          <svg class="acc-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="accordion-content"><div class="accordion-inner">
+          Individua per ogni indirizzo la <strong>disciplina della seconda prova scritta</strong> e le <strong>quattro discipline del colloquio</strong>. Per IIS Mendel: <em>Produzioni Vegetali</em> (IT Agraria); <em>Prova integrata per competenze in uscita</em> (IP Agricoltura nuovo ord.); <em>Economia Agraria e dello Sviluppo Territoriale</em> (IP Servizi – IDA).
+          <br><a class="acc-link" href="https://www.mim.gov.it/-/decreto-ministeriale-n-13-del-29-gennaio-2026" target="_blank" rel="noopener">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            Testo integrale su mim.gov.it
+          </a>
+        </div></div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-trigger" aria-expanded="false">
+          <span class="acc-tag l">Legge</span>
+          <span class="acc-title">L. 1° ottobre 2024, n. 150 — Voto comportamento e credito</span>
+          <svg class="acc-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="accordion-content"><div class="accordion-inner">
+          Art. 15, co. 2-bis D.lgs. 62/2017: il punteggio massimo nella fascia di credito è attribuibile solo se il voto di comportamento è ≥ 9/10 (vale dal 3° anno). Disciplina anche l'<strong>elaborato critico su cittadinanza attiva</strong> per i candidati con comportamento 6/10.
+          <br><a class="acc-link" href="https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2024-10-01;150" target="_blank" rel="noopener">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            Testo integrale su normattiva.it
+          </a>
+        </div></div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-trigger" aria-expanded="false">
+          <span class="acc-tag dm">D.M.</span>
+          <span class="acc-title">D.M. n. 769/2018 — Quadri di riferimento seconda prova</span>
+          <svg class="acc-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="accordion-content"><div class="accordion-inner">
+          Quadri di riferimento per la seconda prova scritta: durata, modalità, criteri di valutazione per ogni indirizzo. Allegati specifici per gli indirizzi agrari (Produzioni Vegetali e Economia Agraria).
+          <br><a class="acc-link" href="https://www.mim.gov.it/-/esami-di-stato-del-secondo-ciclo-di-istruzione-a-s-2018-2019-d-m-769-del-26-novembre-2018" target="_blank" rel="noopener">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            Testo integrale su mim.gov.it
+          </a>
+        </div></div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-trigger" aria-expanded="false">
+          <span class="acc-tag dm">D.M.</span>
+          <span class="acc-title">D.M. n. 1095/2019 — Quadro di riferimento prima prova (Italiano)</span>
+          <svg class="acc-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="accordion-content"><div class="accordion-inner">
+          Quadro di riferimento e griglia di valutazione per la prima prova scritta di Italiano (Tipologie A, B, C). Indicatori generali e specifici per ciascuna tipologia. Prima prova: 18 giugno 2026 ore 8:30, durata 6 ore.
+          <br><a class="acc-link" href="https://www.mim.gov.it/-/decreto-ministeriale-n-1095-del-21-novembre-2019" target="_blank" rel="noopener">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            Testo integrale su mim.gov.it
+          </a>
+        </div></div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-trigger" aria-expanded="false">
+          <span class="acc-tag dm">D.M.</span>
+          <span class="acc-title">D.M. n. 28 del 18 febbraio 2026 — Aree disciplinari correzione prove</span>
+          <svg class="acc-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="accordion-content"><div class="accordion-inner">
+          Individua le <strong>aree disciplinari</strong> cui afferiscono le discipline per la correzione collegiale delle prove scritte (art. 16, co. 6, D.lgs. 62/2017). Sostituisce integralmente il D.M. 319/2015. Rilevante in relazione alla nuova composizione delle commissioni (5 membri) introdotta dalla L. 164/2025.
+          <br><a class="acc-link" href="https://www.mim.gov.it/-/decreto-ministeriale-n-28-del-18-febbraio-2026" target="_blank" rel="noopener">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            Testo integrale su mim.gov.it
+          </a>
+        </div></div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-trigger" aria-expanded="false">
+          <span class="acc-tag dm">D.M.</span>
+          <span class="acc-title">D.M. n. 226/2024 — Candidati esterni (privatisti)</span>
+          <svg class="acc-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="accordion-content"><div class="accordion-inner">
+          Condizioni per l'ammissione dei candidati privatisti: esame preliminare, valutazione quantitativa e qualitativa della FSL pregressa (almeno ¾ del monte ore). Parere sulla validità FSL comunicato almeno 15 giorni prima dell'esame preliminare.
+          <br><a class="acc-link" href="https://www.mim.gov.it/-/decreto-ministeriale-n-226-del-12-novembre-2024" target="_blank" rel="noopener">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            Testo integrale su mim.gov.it
+          </a>
+        </div></div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-trigger" aria-expanded="false">
+          <span class="acc-tag dpr">D.P.R.</span>
+          <span class="acc-title">D.P.R. 22 giugno 2009, n. 122 — Valutazione e deroghe frequenza</span>
+          <svg class="acc-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="accordion-content"><div class="accordion-inner">
+          Regolamento sulla valutazione degli alunni. Art. 14, co. 7: <strong>deroghe al limite minimo di frequenza</strong> (¾ del monte ore annuale). I consigli di classe possono ammettere studenti con assenze superiori al limite per motivate ragioni documentate.
+          <br><a class="acc-link" href="https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.del.presidente.della.repubblica:2009-06-22;122" target="_blank" rel="noopener">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            Testo integrale su normattiva.it
+          </a>
+        </div></div>
+      </div>
+
+    </div>
+
+    <a class="portal-link reveal" href="https://www.istruzione.it/esami-di-primo-e-secondo-ciclo-2025-2026/index.html" target="_blank" rel="noopener">
+      <div class="portal-icon">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+          <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+          <polyline points="9 22 9 12 15 12 15 22"/>
+        </svg>
+      </div>
+      <div class="portal-text">
+        <strong>Portale ufficiale MIM — Esami di Stato 2025/2026</strong>
+        <span>Tutti i decreti, le ordinanze e i documenti ministeriali in un'unica pagina</span>
+      </div>
+      <span class="portal-arrow">&#8594;</span>
+    </a>
+
+  </section>
+</div>
+</main>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal-panel" id="modal-panel">
+    <div class="modal-band" id="modal-band"></div>
+    <div class="modal-top" id="modal-top">
+      <div>
+        <div class="modal-tipo" id="modal-tipo"></div>
+        <div class="modal-class-name" id="modal-title"></div>
+      </div>
+      <button class="modal-close" id="modal-close" aria-label="Chiudi">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+    <div class="modal-body">
+      <dl class="modal-meta" id="modal-meta"></dl>
+      <div class="modal-2prova" id="modal-2prova"></div>
+      <div class="modal-section-title">Profilo della Classe</div>
+      <div class="modal-profilo-text" id="modal-profilo"></div>
+    </div>
+    <div class="modal-footer">
+      <a class="modal-btn-pdf" id="modal-pdf-btn" href="#" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+          <polyline points="14 2 14 8 20 8"/>
+          <line x1="16" y1="13" x2="8" y2="13"/>
+          <line x1="16" y1="17" x2="8" y2="17"/>
+        </svg>
+        Scarica il documento PDF
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">IIS Gregorio Mendel</div>
+    <p>
+      Istituto di Istruzione Superiore Gregorio Mendel<br>
+      <strong>Via Ferrazzi 15 &nbsp;&middot;&nbsp; 20235 Villa Cortese (MI)</strong><br>
+      Dirigente Scolastica: <strong>Dott.ssa Cristina Gualtieri</strong>
+    </p>
+    <hr class="footer-divider">
+    <p>
+      <a href="https://www.agrariomendel.edu.it" target="_blank" rel="noopener">www.agrariomendel.edu.it</a>
+      &nbsp;&middot;&nbsp;
+      <a href="https://iismendel.github.io/Esame-Maturit-_25_26_IIS-MENDEL/" target="_blank">Pagina Esame di Maturità 2025/2026</a>
+    </p>
+    <hr class="footer-divider">
+    <p class="footer-copy">
+      Copyright &copy; 2026 IIS Gregorio Mendel &mdash; Via Ferrazzi 15, 20235 Villa Cortese (MI).<br>
+      Pagina destinata a presidenti e commissari esterni dell'Esame di Stato 2025/2026.
+    </p>
+  </div>
+</footer>
+
+<script>
+/* ════════════════════════════════════════════
+   DATI CLASSI
+   ↓ Modifica qui profilo, articolazione, pdfUrl
+   tipo: "it" | "ip" | "serale"
+════════════════════════════════════════════ */
+const CLASSI = [
+  {
+    badge:"5A", label:"5ª A", tipo:"it", tipoLabel:"Istituto Tecnico",
+    indirizzo:"Agraria, Agroalimentare e Agroindustria",
+    articolazione:"Gestione dell'Ambiente e del Territorio (GAT)",
+    prova2:"Produzioni Vegetali",
+    profilo:"[Sostituire con il testo del Profilo Classe tratto dalle prime pagine del Documento del 15 maggio della classe 5ª A]",
+    profiloPlaceholder:true,
+    pdfUrl:"docs/5A-documento-15maggio2026.pdf"
+  },
+  {
+    badge:"5B", label:"5ª B", tipo:"it", tipoLabel:"Istituto Tecnico",
+    indirizzo:"Agraria, Agroalimentare e Agroindustria",
+    articolazione:"Gestione dell'Ambiente e del Territorio (GAT)",
+    prova2:"Produzioni Vegetali",
+    profilo:"[Sostituire con il testo del Profilo Classe tratto dalle prime pagine del Documento del 15 maggio della classe 5ª B]",
+    profiloPlaceholder:true,
+    pdfUrl:"docs/5B-documento-15maggio2026.pdf"
+  },
+  {
+    badge:"5C", label:"5ª C", tipo:"it", tipoLabel:"Istituto Tecnico",
+    indirizzo:"Agraria, Agroalimentare e Agroindustria",
+    articolazione:"Produzioni e Trasformazioni (PT)",
+    prova2:"Produzioni Vegetali",
+    profilo:"[Sostituire con il testo del Profilo Classe tratto dalle prime pagine del Documento del 15 maggio della classe 5ª C]",
+    profiloPlaceholder:true,
+    pdfUrl:"docs/5C-documento-15maggio2026.pdf"
+  },
+  {
+    badge:"5D", label:"5ª D", tipo:"it", tipoLabel:"Istituto Tecnico",
+    indirizzo:"Agraria, Agroalimentare e Agroindustria",
+    articolazione:"Produzioni e Trasformazioni (PT)",
+    prova2:"Produzioni Vegetali",
+    profilo:"[Sostituire con il testo del Profilo Classe tratto dalle prime pagine del Documento del 15 maggio della classe 5ª D]",
+    profiloPlaceholder:true,
+    pdfUrl:"docs/5D-documento-15maggio2026.pdf"
+  },
+  {
+    badge:"5PA", label:"5ª PA", tipo:"ip", tipoLabel:"Istituto Professionale",
+    indirizzo:"Agricoltura, Sviluppo Rurale, Valorizzazione dei prodotti del territorio",
+    articolazione:"Nuovo ordinamento — Corso diurno",
+    prova2:"Prova integrata per competenze in uscita",
+    profilo:"[Sostituire con il testo del Profilo Classe tratto dalle prime pagine del Documento del 15 maggio della classe 5ª PA]",
+    profiloPlaceholder:true,
+    pdfUrl:"docs/5PA-documento-15maggio2026.pdf"
+  },
+  {
+    badge:"5PB", label:"5ª PB", tipo:"ip", tipoLabel:"Istituto Professionale",
+    indirizzo:"Agricoltura, Sviluppo Rurale, Valorizzazione dei prodotti del territorio",
+    articolazione:"Nuovo ordinamento — Corso diurno",
+    prova2:"Prova integrata per competenze in uscita",
+    profilo:"[Sostituire con il testo del Profilo Classe tratto dalle prime pagine del Documento del 15 maggio della classe 5ª PB]",
+    profiloPlaceholder:true,
+    pdfUrl:"docs/5PB-documento-15maggio2026.pdf"
+  },
+  {
+    badge:"5TS", label:"5ª TS", tipo:"serale", tipoLabel:"Istituto Tecnico · IDA",
+    indirizzo:"Agraria, Agroalimentare e Agroindustria",
+    articolazione:"Corso serale — Istruzione degli Adulti (IDA)",
+    prova2:"Produzioni Vegetali",
+    profilo:"[Sostituire con il testo del Profilo Classe tratto dalle prime pagine del Documento del 15 maggio della classe 5ª TS]",
+    profiloPlaceholder:true,
+    pdfUrl:"docs/5TS-documento-15maggio2026.pdf"
+  },
+  {
+    badge:"5PS", label:"5ª PS", tipo:"serale", tipoLabel:"Istituto Professionale · IDA",
+    indirizzo:"Servizi per l'Agricoltura e lo Sviluppo Rurale",
+    articolazione:"Opzione Valorizzazione e Commercializzazione — Corso serale IDA",
+    prova2:"Economia Agraria e dello Sviluppo Territoriale",
+    profilo:"[Sostituire con il testo del Profilo Classe tratto dalle prime pagine del Documento del 15 maggio della classe 5ª PS]",
+    profiloPlaceholder:true,
+    pdfUrl:"docs/5PS-documento-15maggio2026.pdf"
+  }
+];
+
+/* ── Leaf particles ── */
+const hero = document.getElementById('hero');
+const lp = "M12,2 C8,4 3,10 7,18 C9,22 12,26 12,26 C12,26 15,22 17,18 C21,10 16,4 12,2 Z";
+const lc = ['rgba(76,175,80,0.35)','rgba(129,199,132,0.25)','rgba(232,160,0,0.18)','rgba(165,214,167,0.3)'];
+for (let i=0;i<14;i++){
+  const el=document.createElement('div');
+  el.className='leaf';
+  const sz=14+Math.random()*22, left=Math.random()*100,
+        dur=12+Math.random()*18, delay=Math.random()*20,
+        col=lc[Math.floor(Math.random()*lc.length)];
+  el.style.cssText=`left:${left}%;bottom:-60px;width:${sz}px;height:${sz}px;animation-duration:${dur}s;animation-delay:${delay}s;`;
+  el.innerHTML=`<svg viewBox="0 0 24 28" width="${sz}" height="${sz}"><path d="${lp}" fill="${col}"/></svg>`;
+  hero.appendChild(el);
+}
+
+/* ── Progress bar ── */
+const pb = document.getElementById('progress-bar');
+window.addEventListener('scroll', ()=>{
+  pb.style.width = (window.scrollY/(document.body.scrollHeight-window.innerHeight)*100)+'%';
+},{passive:true});
+
+/* ── Scroll reveal ── */
+const ro = new IntersectionObserver(es=>{
+  es.forEach(e=>{ if(e.isIntersecting){e.target.classList.add('visible');ro.unobserve(e.target);} });
+},{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
+
+/* ── Render cards ── */
+const grid = document.getElementById('docs-grid');
+const pdfSVG = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>`;
+const chevSVG= `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>`;
+
+const co = new IntersectionObserver(es=>{
+  es.forEach((e,i)=>{ if(e.isIntersecting){setTimeout(()=>e.target.classList.add('revealed'),i*70);co.unobserve(e.target);} });
+},{threshold:0.05});
+
+CLASSI.forEach(cl=>{
+  const card=document.createElement('article');
+  card.className=`doc-card ${cl.tipo}`;
+  card.dataset.tipo=cl.tipo;
+  card.setAttribute('role','button');
+  card.setAttribute('tabindex','0');
+  card.setAttribute('aria-label',`Apri documento ${cl.label}`);
+  card.innerHTML=`
+    <div class="card-band ${cl.tipo}"></div>
+    <div class="card-header">
+      <div class="class-badge">${cl.badge}</div>
+      <div>
+        <span class="card-tipo">${cl.tipoLabel}</span>
+        <div class="card-indirizzo">${cl.indirizzo}</div>
+        <div class="card-articolazione">${cl.articolazione}</div>
+      </div>
+    </div>
+    <div class="card-divider"></div>
+    <div class="card-profilo">
+      <div class="profilo-label">Profilo della Classe</div>
+      <p class="profilo-snippet${cl.profiloPlaceholder?' placeholder':''}">${cl.profilo}</p>
+    </div>
+    <div class="card-readmore">Leggi il profilo completo ${chevSVG}</div>
+    <div class="card-footer">
+      <a class="btn-pdf" href="${cl.pdfUrl}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${pdfSVG} Scarica PDF</a>
+    </div>`;
+  card.addEventListener('click', ()=>openModal(cl));
+  card.addEventListener('keydown', e=>{ if(e.key==='Enter'||e.key===' ')openModal(cl); });
+  grid.appendChild(card);
+  co.observe(card);
+});
+
+/* ── Filter ── */
+document.getElementById('count-all').textContent    = CLASSI.length;
+document.getElementById('count-it').textContent     = CLASSI.filter(c=>c.tipo==='it').length;
+document.getElementById('count-ip').textContent     = CLASSI.filter(c=>c.tipo==='ip').length;
+document.getElementById('count-serale').textContent = CLASSI.filter(c=>c.tipo==='serale').length;
+
+document.querySelectorAll('.filter-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    const f=btn.dataset.filter;
+    const cards=grid.querySelectorAll('.doc-card');
+    if(f==='all'){
+      grid.classList.remove('filtered-view');
+      cards.forEach(c=>c.classList.remove('visible'));
+    } else {
+      grid.classList.add('filtered-view');
+      cards.forEach(c=>c.classList.toggle('visible',c.dataset.tipo===f));
+    }
+  });
+});
+
+/* ── Modal ── */
+const overlay  =document.getElementById('modal-overlay');
+const mBand    =document.getElementById('modal-band');
+const mTipo    =document.getElementById('modal-tipo');
+const mTitle   =document.getElementById('modal-title');
+const mMeta    =document.getElementById('modal-meta');
+const m2prova  =document.getElementById('modal-2prova');
+const mProfilo =document.getElementById('modal-profilo');
+const mPdfBtn  =document.getElementById('modal-pdf-btn');
+const mClose   =document.getElementById('modal-close');
+const mPanel   =document.getElementById('modal-panel');
+
+function openModal(cl){
+  ['it','ip','serale'].forEach(t=>{
+    mBand.classList.remove(t);
+    mTitle.classList.remove(t);
+    mTipo.classList.remove(t);
+    mPdfBtn.classList.remove(t);
+  });
+  mBand.classList.add(cl.tipo);
+  mTitle.className =`modal-class-name ${cl.tipo}`;
+  mTipo.className  =`modal-tipo ${cl.tipo}`;
+  mPdfBtn.className=`modal-btn-pdf ${cl.tipo}`;
+
+  mTipo.textContent  = cl.tipoLabel;
+  mTitle.textContent = cl.label;
+  mMeta.innerHTML =
+    `<div class="modal-meta-row"><dt>Indirizzo</dt><dd>${cl.indirizzo}</dd></div>
+     <div class="modal-meta-row"><dt>Articolazione</dt><dd>${cl.articolazione}</dd></div>`;
+  m2prova.innerHTML =
+    `<div class="modal-2prova-icon">II</div>
+     <div class="modal-2prova-text">
+       <strong>Seconda prova scritta (D.M. n. 13/2026)</strong>
+       <span>${cl.prova2}</span>
+     </div>`;
+  mProfilo.className=`modal-profilo-text${cl.profiloPlaceholder?' placeholder':''}`;
+  mProfilo.textContent=cl.profilo;
+  mPdfBtn.href=cl.pdfUrl;
+
+  overlay.classList.add('open');
+  document.body.style.overflow='hidden';
+  mPanel.scrollTop=0;
+  mClose.focus();
+}
+
+function closeModal(){
+  overlay.classList.remove('open');
+  document.body.style.overflow='';
+}
+
+mClose.addEventListener('click',closeModal);
+overlay.addEventListener('click',e=>{ if(e.target===overlay)closeModal(); });
+document.addEventListener('keydown',e=>{ if(e.key==='Escape')closeModal(); });
+
+/* ── Accordion ── */
+document.querySelectorAll('.accordion-trigger').forEach(trigger=>{
+  trigger.addEventListener('click',()=>{
+    const content=trigger.nextElementSibling;
+    const isOpen=trigger.getAttribute('aria-expanded')==='true';
+    document.querySelectorAll('.accordion-trigger').forEach(t=>{
+      t.setAttribute('aria-expanded','false');
+      t.nextElementSibling.classList.remove('open');
+    });
+    if(!isOpen){
+      trigger.setAttribute('aria-expanded','true');
+      content.classList.add('open');
+    }
+  });
+});
+</script>
+</body>
+</html>
